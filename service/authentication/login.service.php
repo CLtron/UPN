@@ -46,7 +46,8 @@ if(isset($_POST['login-submit'])) {
                 header("Location: ../login/login.php?error=nouser");
                 exit();                    
             }
-        }
+        
+	}
     }
 }
 else {
