@@ -1,1 +1,11 @@
+TODO /service/
 
+- Update layout (replace old links, etc.)
+- Delete Mail-Function
+
+TODO (Features):
+- Chatroom (e.g. WhatsApp)
+  -> group permissions (admin, member)
+- Direct Chat
+- Public broadcast (e.g. Twitter)
+- Photo sharing (e.g. Instagram)
