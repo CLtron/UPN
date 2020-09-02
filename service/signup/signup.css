@@ -1,17 +1,20 @@
-.loginbox{
+.login {
     display: block;
     position: absolute;
-    width: 500px;
-    padding: 40px;
-    margin: 30px 0;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
     background: rgba(0, 0, 0, 0.85);
-    
 }
 
+.loginbox{
+    display: block;
+    position: relative;
+    text-align: center;
+    top: 20%;
+    
+}
 .loginbox h1{
     color: white;
     text-transform: uppercase;
@@ -67,29 +70,13 @@
     text-align: center;
 }
 
-.success {
-    display: block;
-    position: absolute;
-    width: 500px;
-    padding: 40px;
-    margin: 30px 0;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+.loginbox a {
+    position: relative;
+    width: 100%;
+    color: white;
     text-align: center;
-    background: rgba(0, 0, 0, 0.85);
-    
-
 }
 
-.success p {
-    font-weight: 500;
-    color: #2ecc71;
+.loginbox a:hover {
+    color: blue;
 }
-
-.success a {
-    font-size: 26px;
-    font-weight: 500;
-    color: #fff;
-}
-
