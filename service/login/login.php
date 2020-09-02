@@ -50,12 +50,6 @@
                         <p class="msg">Ein unbekannter Fehler ist im System aufgetreten!<br>Bitte versuche es später erneut</p>';
                     }
                 } 
-                else if(isset($_GET['mail'])) {
-                    echo '<input type="text" name="user" placeholder="Benutzername" value='.$_GET['mail'].'>
-                    <input type="password" name="pwd" placeholder="Passwort">
-                    <input class="animate-box-color" type="submit" name="login-submit" value="Anmelden">
-                    <p class="msg" style="color: #2ecc71">Dein Account wurde aktiviert!<br>Gebe hier dein Passwort um dich Anzumelden</p>';
-                }
                 else {
                     echo '<input type="text" name="user" placeholder="Benutzername">
                     <input type="password" name="pwd" placeholder="Passwort">
