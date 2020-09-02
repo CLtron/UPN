@@ -80,24 +80,6 @@
                 echo '</form>';
 
             }
-            else if(isset($_GET['signup'])) { // error handler
-                if($_GET['signup'] == "success") {
-                    echo '<div class="success">
-                    <p>Dein Account wurde erfolgreich erstellt!<br>Eine Email mit einem Aktivierungslink wurde an dich versendet.<br>Bitte prüfe nun dein Postfach.<br><br><a href="../authentication/logout.service.php>Zur Startseite</a></p>                          
-                    </div>';
-                            
-                }
-                else {
-                    echo '<form autocomplete="off" class="loginbox" action="/service/authentication/signup.service.php" method="post">
-                    <h1>Registrieren</h1>
-                    <input type="text" name="user" placeholder="Benutzername">
-                    <input type="password" name="pwd" placeholder="Password">
-                    <input type="password" name="pwd-repeat" placeholder="Password wiederholen">
-                    <input class="animate-box-color" type="submit" name="signup-submit" value="Registrieren">
-
-                    </form>';                                                        
-                }
-            }
             else {
                 echo '<form autocomplete="off" class="loginbox" action="/service/authentication/signup.service.php" method="post">
                 <h1>Registrieren</h1>
