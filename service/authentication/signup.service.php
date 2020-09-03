@@ -73,5 +73,4 @@ else {
 	header("Location: /service/signup/signup.php");
 	exit();			
 }
-
 ?>
