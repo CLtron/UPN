@@ -3,7 +3,6 @@
 if(isset($_POST['signup-submit'])) {
 	
 	require '../dbh.service.php';
-	require 'mail.service.php';
 	
 	$username = $_POST['user'];
 	$password = $_POST['pwd'];	
