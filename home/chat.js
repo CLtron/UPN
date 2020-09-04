@@ -22,11 +22,3 @@ server.onreadystatechange = function() {
 server.open("GET", "chat.txt",);
 server.send();
 };
-
-function put() {
-  var aX = new ActiveXObject("Scripting.FileSystemObject");
-  //aX.CreateTextFile("chat.txt");
-  var file = aX.GetFile("chat.txt");
-  var writefile = file.OpenAsTextStrem(2);
-  writefile.Write(document.getElementById("msg").innerHTML.value);
-}
