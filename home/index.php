@@ -12,12 +12,13 @@
 </head>
 
 <body onload="Initialize(); get_msg()">
-
-  <form id="chat_line" action="" method="POST">
+<div id="chat_line">
+  <form action="" method="POST">
     <input type="text" id="msg" name="msg" placeholder="Nachricht...">
-    <p style="display:none;" id="btn_prsd" name="btn">false</p>
+    </br>
     <input type="submit" name="btn" value="Senden">
   </form>
+</div>
 
   <p id="chat">Test</p>
 

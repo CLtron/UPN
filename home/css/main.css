@@ -1,3 +1,11 @@
-.chat_line {
-  font-size: 6em;
+body {
+  text-align: center;
+  font-size: 2em;
+}
+input {
+ width: 25em;
+ height: 5em;
+}
+.form_distn {
+ height: 1em;
 }
