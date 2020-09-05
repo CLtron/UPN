@@ -5,7 +5,7 @@
 <body onload="Initialize()">
 
 <input type="text" id="msg" name="msg" placeholder="Nachricht...">
-<button type="submit" onclick="get_msg()">Senden</button>
+<button type="submit" onclick="get_msg()">Empfangen</button>
 <button type="button" name="send">Senden</button>
 <p id="chat">Test</p>
 
