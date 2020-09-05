@@ -1,24 +1,18 @@
 <html>
 <head>
   <script type="text/javascript" src="chat.js"> </script>
+ <?php require 'chat.php'; ?>
 </head>
 <body onload="Initialize()">
 
+<form action="" method="POST">
 <input type="text" id="msg" name="msg" placeholder="Nachricht...">
+<p style="display:none;" id="btn_prsd" name="btn">false</p>
+<input type="submit" name="btn" value="Senden">
+</form>
 <button type="submit" onclick="get_msg()">Empfangen</button>
-<button type="button" name="send">Senden</button>
-<p id="chat">Test</p>
 
-<?php
-        if(array_key_exists('send', $_POST)) {
-            button1();
-          }
-        function button1() {
-          $chatfile = fopen("chat.txt", "w");
-          $message = $_GET("msg");
-          fwrite($chatfile, $message);
-        }
-    ?>
+<p id="chat">Test</p>
 
 </body>
 </html>
