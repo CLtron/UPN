@@ -10,7 +10,7 @@ function getValue() {
   console.log(usr_value);
 }
 
-function send_msg() {
+function get_msg() {
 
 server.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
