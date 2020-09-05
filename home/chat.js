@@ -22,4 +22,6 @@ server.onreadystatechange = function() {
 
 server.open("GET", "chat.txt",);
 server.send();
+
+setTimeout(get_msg, 1000);
 };
