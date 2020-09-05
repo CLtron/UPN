@@ -11,7 +11,7 @@ function getValue() {
 }
 
 function get_msg() {
-
+server.overrideMimeType("text/plain");
 server.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
        // Typical action to be performed when the document is ready:

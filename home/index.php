@@ -10,17 +10,15 @@
 <p id="chat">Test</p>
 
 <?php
-    if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['send']))
-    {
-        letsGo();
-    }
-    function letsGo()
-    {
-      $chatfile = fopen("chat.txt", "w");
-      $message = $_POST("msg");
-      fwrite($chatfile, $message);
-    }
-?>
+        if(array_key_exists('send', $_POST)) {
+            button1();
+          }
+        function button1() {
+          $chatfile = fopen("chat.txt", "w");
+          $message = $_GET("msg");
+          fwrite($chatfile, $message);
+        }
+    ?>
 
 </body>
 </html>
