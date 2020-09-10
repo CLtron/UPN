@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+#underline {
+    text-decoration: underline;
+    color: rgb(59, 140, 226);
+}
+
+.top-nav {
+    display: block;
+    width: 100%;
+    background-color: rgb(28, 45, 63);
+}
+
+.top-nav h1 {
+    padding: 20px 0 10px 20px;
+    font-size: 24px;
+    line-height: 30px;
+    font-style: bold;
+    color: rgb(140, 185, 233);
+}
+
+.top-nav ul {
+    display: block;
+    margin: 0px auto;
+    padding: 20px 0;
+    width: fit-content;
+}
+
+.top-nav ul li {
+    display: inline-block;
+    list-style: none;
+    padding: 0 10px;
+}
+
+.top-nav ul li .active {
+    font-size: 22px;
+    font-style: bold;
+    color: rgb(130, 123, 156);
+    text-decoration: underline;
+}
+
+.top-nav ul li h2 {
+    font-size: 22px;
+    font-style: bold;
+    color: rgb(140, 185, 233);
+}
+
+.top-nav ul li button {
+    font-size: 20px;
+    padding: 2px;
+    font-style: bold;
+    background-color: #4CAF50;
+    color: #000;
+}
+
+
+.box {
+    position: relative;
+    width: 100%;
+    top: 20px;
+}
+
+.box .contact {
+    position: relative;
+    display: block;
+    background-color: white;
+}
+
+.box .contact .photo {
+    position: relative;
+    display: block;
+    width: 75px;
+    height: 75px;
+    float: left;
+}
+
+.box .contact .photo img {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.box .contact .latest {
+    position: relative;
+    display: block;
+    height: 75px;
+    max-width: calc(100% - 75px - 10px);
+    margin-left: calc(75px + 10px);
+    overflow: hidden;
+}
+
+.box .contact .latest .name {
+    font-size: 25px;
+    line-height: 40px;
+    margin-top: 5px;
+}
+
+.box .contact .latest .last-msg {
+    font-size: 16px;
+    line-height: 16px;
+    margin-bottom: 10px;
+}
+
+
+
+/* Bordered form */
+.action  {
+    border: 3px solid #f1f1f1;
+}
+  
+/* Full-width inputs */
+.action input[type=text], .action input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+.action button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 18px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 60%;
+}
+
+/* Add a hover effect for buttons */
+.action button:hover {
+    opacity: 0.8;
+}
+
+/* Extra style for the cancel button (red) */
+.action .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Center the avatar image inside this container */
+.action .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+/* Avatar image */
+.action img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+/* Add padding to containers */
+.action .container {
+    padding: 16px;
+}
+
+/* The "Forgot password" text */
+.action button.login {
+    float: right;
+    padding-top: 16px;
+}
