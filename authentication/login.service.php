@@ -69,4 +69,3 @@ else {
     header("Location: /overview.php?action=login");
     exit();			
 }
-
