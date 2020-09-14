@@ -31,4 +31,3 @@ if(!$conn) {
 //     contact longtext NOT NULL,
 //     msg longtext NOT NULL
 // );
-
