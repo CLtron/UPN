@@ -3,16 +3,39 @@
     padding: 0;
 }
 
+#loader {
+    position: absolute;
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    top: calc((100% - 152px) / 2);
+    left: calc((100% - 152px) / 2);
+    animation: spin 2s linear infinite;      
+}
 
-#underline {
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+
+body {
+    background-color: rgb(39, 62, 87);
+}
+
+.underline {
     text-decoration: underline;
     color: rgb(59, 140, 226);
 }
 
 .top-nav {
+    position: relative;
     display: block;
     width: 100%;
-    background-color: rgb(28, 45, 63);
+    background-color: rgb(56, 94, 134);
+    z-index: 1000;
 }
 
 .top-nav h1 {
@@ -25,36 +48,38 @@
 
 .top-nav ul {
     display: block;
-    margin: 0px auto;
-    padding: 20px 0;
-    width: fit-content;
+    padding: 10px 0;
+    width: 100%;
+    margin: 0 20px;
 }
 
 .top-nav ul li {
     display: inline-block;
     list-style: none;
-    padding: 0 10px;
+    padding: 0 8px;
 }
 
-.top-nav ul li .active {
-    font-size: 22px;
-    font-style: bold;
-    color: rgb(130, 123, 156);
-    text-decoration: underline;
-}
 
-.top-nav ul li h2 {
+.top-nav ul li button {
     font-size: 22px;
     font-style: bold;
     color: rgb(140, 185, 233);
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
 }
 
-.top-nav ul li button {
+.top-nav .btn {
+    position: relative;
     font-size: 20px;
-    padding: 2px;
-    font-style: bold;
-    background-color: #4CAF50;
-    color: #000;
+    padding: 6px 4px;
+    border-radius: 5px;
+    color: rgb(177, 210, 253);
+    background-color: rgb(41, 71, 104);
+    border: none;
+    float: right;
+    margin-right: 40px;
+    bottom: 8px;
 }
 
 
@@ -67,7 +92,8 @@
 .box .contact {
     position: relative;
     display: block;
-    background-color: white;
+    background-color: rgb(39, 62, 87);
+    cursor: pointer;
 }
 
 .box .contact .photo {
@@ -100,19 +126,106 @@
     font-size: 25px;
     line-height: 40px;
     margin-top: 5px;
+    color: rgb(233, 233, 233);
 }
 
 .box .contact .latest .last-msg {
     font-size: 16px;
     line-height: 16px;
     margin-bottom: 10px;
+    color: rgb(117, 117, 117);
 }
 
 
+.master {
+    position: relative;
+    width: 100%;
+    
+}
+
+.master p.info {
+    position: relative;
+    display: block;
+    background-color: rgb(255, 196, 2);
+    text-align: center;
+    width: 60%;
+    line-height: 40px;
+    font-size: 25px;
+    font-style: oblique;
+    top: 20px;
+    left: 20%;
+    border-radius: 10px;
+}
+
+.master div.msg {
+    overflow: scroll;
+    height: 550px;
+}
+
+.master .msg .adjustment {
+    display: table;
+    width: 100%;
+    height: auto;
+    min-height: 20px;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.master .msg .adjustment .line-me {
+    display: table-cell;
+    float: right;
+    background-color: rgb(27, 146, 110);
+    max-width: 80%;
+    overflow-wrap: break-word;
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.master .msg .adjustment .line-other {
+    display: table-cell;
+    background-color: rgb(56, 94, 134);
+    float: left;
+    max-width: 80%;
+    overflow-wrap: break-word;
+    margin-left: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+.master input[type=text] {
+    position: relative;
+    display: block;
+    width: 80%;
+    float: left;
+    line-height: 40px;
+    font-size: 20px;
+    margin-left: 10px;
+    background-color: rgb(84, 123, 165);
+}
+
+.master button {
+    position: relative;
+    display: block;
+    float: right;
+    margin-right: 10px;
+    width: 46px;
+    height: 46px;
+    background-color: #4CAF50;
+}
+
+.master button img {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+
+}
 
 /* Bordered form */
 .action  {
     border: 3px solid #f1f1f1;
+    color: rgb(140, 185, 233);
 }
   
 /* Full-width inputs */
@@ -123,6 +236,7 @@
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
+    background-color: rgb(84, 123, 165);
 }
 
 /* Set a style for all buttons */
@@ -163,6 +277,7 @@
 /* Add padding to containers */
 .action .container {
     padding: 16px;
+    background-color: rgb(27, 42, 58);
 }
 
 /* The "Forgot password" text */
@@ -170,3 +285,5 @@
     float: right;
     padding-top: 16px;
 }
+
+

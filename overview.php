@@ -1,8 +1,9 @@
-<!DOCTYPE html>
-
 <?php
     session_start();
+    
 ?>
+
+<!DOCTYPE html>
 
 <html>
 <head>
@@ -12,49 +13,39 @@
     <title>Chat</title>
 
     <link rel="stylesheet" href="main.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <script src="jquery-3.5.1.min.js"></script>
 </head>
 
 <body>
     
     <?php
         if(isset($_SESSION["uuid"]) && isset($_SESSION["pwd"]) && isset($_SESSION["auth"])) {
-            
-            
-            echo '<div class="top-nav">
-                <h1>Ulricianum ChatBox</h1>
-                <ul class="nav-bar">
-                    <li><h2 class="nav-clickable contacts" id="underline">Kontakte</h2></li>
-                    <li><h2 class="nav-clickable stat">Erkunden</h2></li>
-                    <li><button onclick="sendToLogout()">Abmelden</button></li>
-                </ul>
-            </div>';
 
-            echo '<div class="box">
-                <div class="contact">
-                    <div class="photo">
-                        <img src="user.png" alt="Profile">    
-                    </div>
-                    <div class="latest">
-                        <h3 class="name">Bob</h3>
-                        <p class="last-msg">Bis morgen</p>    
-                    </div>
-                </div>
-                <div class="contact">
-                    <div class="photo">
-                        <img src="user.png" alt="Profile">    
-                    </div>
-                    <div class="latest">
-                        <h3 class="name">Alice</h3>
-                        <p class="last-msg">ok</p>    
-                    </div>
-                </div>
+            echo '<div class="top-nav">
+                <h1 id="h1">ChatBox</h1>
+                <ul class="nav-bar">
+                    <li><button id="btn-contact">Kontakte</button></li>
+                    <li><button id="btn-explore">Hinzufügen</button></li>
+                    <button class="btn" onclick="sendToLogout()">Abmelden</button>
+                </ul>
+                
+                </div>';
+
+            echo '<div class="box" id="box"></div>';
+
+            echo '<div class="master" id="master">
+            <div class="msg" id="msg">
+               
+            </div>
+            <input type="text" name="msg-input" id="msg-input" placeholder="Nachricht" reqired>
+            <button type="button" class="msg-send" id="msg-send"><img src="send.png"></button>
             </div>';
         }
         else {
 
             echo '<div class="top-nav">
-                <h1>Ulricianum ChatBox</h1>
+                <h1>ChatBox</h1>
             </div>';
 
             if(isset($_GET["action"])) {
@@ -76,7 +67,7 @@
                         
                         </form>
                         
-                        <div class="container" style="background-color:#f1f1f1">
+                        <div class="container">
                             <button type="button" class="cancelbtn">Abbrechen</button>
                             <button type="button" class="pagebtn content-register" onclick="sendToSignup()">Erstelle einen Account</button>
                         </div>
@@ -103,7 +94,7 @@
                         
                         </form>
                         
-                        <div class="container" style="background-color:#f1f1f1">
+                        <div class="container">
                             <button type="button" class="cancelbtn">Abbrechen</button>
                             <button type="button" class="pagebtn content-login" onclick="sendToLogin()">Melde dich an</button>
                         </div>
@@ -121,3 +112,5 @@
 
 
 </html>
+
+

@@ -1,8 +1,8 @@
 <?php
 
 $servername = "localhost";
-$dbUsername = "web";
-$dbPassword = "dqIQ1OEPqUOi56tl";
+$dbUsername = "pi";
+$dbPassword = "raspberry";
 $dbName = "web";
 
 $conn = mysqli_connect($servername,$dbUsername,$dbPassword,$dbName);
@@ -17,3 +17,18 @@ if(!$conn) {
 //     pwd longtext NOT NULL,
 //     auth longtext NOT NULL
 // );
+
+// CREATE TABLE messages (
+// 	id int(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+//     sender longtext NOT NULL,
+//     receiver longtext NOT NULL,
+//     msg longtext NOT NULL
+// );
+
+// CREATE TABLE contacts (
+// 	id int(255) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+//     uuid longtext NOT NULL,
+//     contact longtext NOT NULL,
+//     msg longtext NOT NULL
+// );
+
