@@ -1,4 +1,4 @@
-# UPN-Netzwerk
+# UPN (Ulricianum Private Network)
 
-Edit by You
-And another one...
+UPN ist eine einfache ChatBox die von zwei Schülern einer
+10. Klasse entworfen worden ist.
