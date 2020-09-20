@@ -1,6 +1,5 @@
 <?php
     session_start();
-    
 ?>
 
 <!DOCTYPE html>
@@ -10,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Chat</title>
+    <title>ChatBox</title>
 
     <link rel="stylesheet" href="main.css">
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
@@ -23,7 +22,10 @@
         if(isset($_SESSION["uuid"]) && isset($_SESSION["pwd"]) && isset($_SESSION["auth"])) {
 
             echo '<div class="top-nav">
-                <h1 id="h1">ChatBox</h1>
+                <div class="headline">
+                    <h1 id="h1">ChatBox</h1>
+                    <p id="loggedin">Angemeldet als: '.$_SESSION["uuid"].'</p>
+                </div>
                 <ul class="nav-bar">
                     <li><button id="btn-contact">Kontakte</button></li>
                     <li><button id="btn-explore">Hinzufügen</button></li>
@@ -45,8 +47,15 @@
         else {
 
             echo '<div class="top-nav">
-                <h1>ChatBox</h1>
+            <div class="headline">
+                <h1 id="h1">ChatBox</h1>
+            </div>
             </div>';
+
+            echo '<div id="alert">
+                <h1>Leider unterstützt dein Browser kein Javascript!<br>Bitte aktiviere JavaScript um diese Seite nutzen zu können.</h1>
+            </div>';
+
 
             if(isset($_GET["action"])) {
                 if($_GET["action"] == "login") {
